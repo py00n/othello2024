@@ -1,25 +1,3 @@
-BLACK=1
-WHITE=2
-
-board = [
-        [0,0,0,0,0,0],
-        [0,0,0,0,0,0],
-        [0,0,1,2,0,0],
-        [0,0,2,1,0,0],
-        [0,0,0,0,0,0],
-        [0,0,0,0,0,0],
-]
-
-
-class AI(object):
-
-    def face(self):
-        return "🐼"
-
-    def place(self, board, stone):
-        return x, y
-
-
 import random
 import math
 
@@ -151,6 +129,8 @@ for _ in range(1000):  # 1000回対戦
     for action in Q_TABLE.get(state, {}):
         update_q_table(state, action, reward, state)
 
+
+
 !pip install -U kogi-canvas
 
 from kogi_canvas import play_othello, PandaAI
@@ -167,4 +147,4 @@ board = [
         [0,0,0,0,0,0],
 ]
 
-play_othello(NonAI()) # ここを自分の作ったAIに変える
+play_othello(PandaAI()) # ここを自分の作ったAIに変える
