@@ -95,9 +95,9 @@ def choose_action(board, stone):
 
         return best_action
 
-class PandaAI(object):
+class PopoAI(object):
     def face(self):
-        return "🐼"
+        return "🍫"
 
     def place(self, board, stone):
         # 最適な手を選ぶ
@@ -108,7 +108,7 @@ def play_game():
     board_copy = [row[:] for row in board]  # ボードのコピー
     turn = BLACK  # 最初は黒が先手
     while can_place(board_copy, turn):
-        x, y = PandaAI().place(board_copy, turn)
+        x, y = PopoAI().place(board_copy, turn)
         board_copy[y][x] = turn
         turn = 3 - turn  # 黒と白を交互に
 
@@ -147,4 +147,4 @@ board = [
         [0,0,0,0,0,0],
 ]
 
-play_othello(PandaAI()) # ここを自分の作ったAIに変える
+play_othello(PopoAI()) # ここを自分の作ったAIに変える
